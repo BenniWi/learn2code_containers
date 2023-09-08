@@ -37,17 +37,17 @@ RUN \
 
 
 
-#RUN \
-#    echo 'export FMT_RESET="\e[0m"' >> /dev/.bash_profile \
-#    echo 'export FG_BLACK="\e[30m"' >> /dev/.bash_profile \
-#    echo 'export FG_GREEN="\e[32m"' >> /dev/.bash_profile \
-#    echo 'export FG_MAGENTA="\e[35m"' >> /dev/.bash_profile \
-#    echo 'export FG_RED="\e[31m"' >> /dev/.bash_profile \
-#    echo 'export FG_WHITE="\e[97m"' >> /dev/.bash_profile \
-#    echo 'export BG_BLUE="\e[44m"' >> /dev/.bash_profile \
-#    echo 'export BG_GREEN="\e[42m"' >> /dev/.bash_profile \
-#    echo 'export BG_MAGENTA="\e[45m"' >> /dev/.bash_profile \
-#    echo 'export PS1="\n\[${BG_GREEN}\] \[${FG_RED}\]>> \[${FG_BLACK}\]\u \[${FG_GREEN}${BG_BLUE}\]\[${FG_BLACK}\]\w \[${FMT_RESET}${FG_BLUE}\]\[${BG_MAGENTA}\]\[${FG_WHITE}\]\$( git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/' )\[${FMT_RESET}${FG_MAGENTA}\]\n \[${FG_GREEN}\]╰ \[${FG_CYAN}\]\$ \[${FMT_RESET}\]"' >> /root/.bash_profile
+RUN \
+    echo 'export FMT_RESET="\e[0m"' >> /dev/.bash_profile \
+    echo 'export FG_BLACK="\e[30m"' >> /dev/.bash_profile \
+    echo 'export FG_GREEN="\e[32m"' >> /dev/.bash_profile \
+    echo 'export FG_MAGENTA="\e[35m"' >> /dev/.bash_profile \
+    echo 'export FG_RED="\e[31m"' >> /dev/.bash_profile \
+    echo 'export FG_WHITE="\e[97m"' >> /dev/.bash_profile \
+    echo 'export BG_BLUE="\e[44m"' >> /dev/.bash_profile \
+    echo 'export BG_GREEN="\e[42m"' >> /dev/.bash_profile \
+    echo 'export BG_MAGENTA="\e[45m"' >> /dev/.bash_profile \
+    echo 'export PS1="\n\[${BG_GREEN}\] \[${FG_RED}\]>> \[${FG_BLACK}\]\u \[${FG_GREEN}${BG_BLUE}\]\[${FG_BLACK}\]\w \[${FMT_RESET}${FG_BLUE}\]\[${BG_MAGENTA}\]\[${FG_WHITE}\]\$( git branch 2> /dev/null | sed -e ''/^[^*]/d'' -e ''s/* \(.*\)/ (\1)/'' )\[${FMT_RESET}${FG_MAGENTA}\]\n \[${FG_GREEN}\]╰ \[${FG_CYAN}\]\$ \[${FMT_RESET}\]"' >> /root/.bash_profile
 
 USER $USERNAME
 
