@@ -40,7 +40,7 @@ RUN \
 COPY ./prompt.sh /home/dev/.prompt
 RUN \
     chown dev:dev /home/dev/.prompt \
-    echo 'source /home/dev/.prompt' >> /home/dev/.bashrc
+    && echo 'source /home/dev/.prompt' >> /home/dev/.bashrc
     
 # set user to start and working directory
 USER $USERNAME
