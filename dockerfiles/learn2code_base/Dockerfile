@@ -1,4 +1,4 @@
-FROM ubuntu:20.
+FROM ubuntu:20.04
 
 # fix the timezone asking when creating the container
 ENV TZ=Europe/Berlin
