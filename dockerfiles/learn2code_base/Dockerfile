@@ -1,5 +1,4 @@
-                                                                                                                                                                                                                                                    FROM ubuntu:20.04
-MAINTAINER learn2code test@googlemail.com
+FROM ubuntu:20.
 
 # fix the timezone asking when creating the container
 ENV TZ=Europe/Berlin
