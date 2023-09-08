@@ -14,6 +14,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Build the Docker 
+    - name: Build the base Docker 
       working-directory: ./dockerfiles/learn2code_base
       run: docker build . --file Dockerfile --tag learn2code:base
+    - name: Build the lecture Docker 
+      working-directory: ./dockerfiles/learn2code_lecture
+      run: docker build . --file Dockerfile --tag learn2code:lecture
