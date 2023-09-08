@@ -1,4 +1,4 @@
-FROM benniwi:learn2code:base
+FROM benniwi/learn2code:base
 
 RUN \
  apt-get update \
