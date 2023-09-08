@@ -18,6 +18,7 @@ RUN groupadd --gid $USER_GID $USERNAME \
     && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
     && chmod 0440 /etc/sudoers.d/$USERNAME
 
+# install everythin we need
 RUN \
     apt-get -y update \
     && apt-get install -y git build-essential lldb gdb ninja-build libgtest-dev wget curl software-properties-common \
@@ -35,11 +36,15 @@ RUN \
     # clean up
     && rm -rf /var/lib/apt/lists/*
 
+# bring in a nice shell prompt
+COPY ./prompt.sh /home/dev/.prompt
+RUN \
+    chown dev:dev /home/dev/.prompt.sh \
+    echo 'source /home/dev/.prompt' >> /home/dev/.bashrc
+    
+# set user to start and working directory
 USER $USERNAME
 WORKDIR /home/dev
-
-COPY ./prompt.sh /home/dev/.prompt.sh
-RUN echo 'source /home/dev/.prompt.sh' >> /home/dev/.bashrc
 
     
     
