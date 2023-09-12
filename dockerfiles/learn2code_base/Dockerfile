@@ -44,7 +44,7 @@ RUN \
     
 # set user to start and working directory
 USER $USERNAME
-WORKDIR /home/dev
+WORKDIR /home/$USERNAME
 
     
     
