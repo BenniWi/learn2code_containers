@@ -10,7 +10,9 @@ Currently the available containers are
 ## Base Container
 The [base contaier](https://github.com/BenniWi/learn2code_containers/tree/main/dockerfiles/learn2code_base) defines a container which can be used for for all programming tasks during the lecture.
 
+## Base Marp Container
+The [base marp contaier](https://github.com/BenniWi/learn2code_containers/tree/main/dockerfiles/learn2code_base_marp) extends the [base contaier](https://github.com/BenniWi/learn2code_containers/tree/main/dockerfiles/learn2code_base) with a marp layer to be able to create slides
 
 ## Lecture Container
-The [lecture container ](https://github.com/BenniWi/learn2code_containers/tree/main/dockerfiles/learn2code_lecture) uses the [base contaier](https://github.com/BenniWi/learn2code_containers/tree/main/dockerfiles/learn2code_base) and adds everything needed to build all the lecture code and also the lecture slides.
+The [lecture container ](https://github.com/BenniWi/learn2code_containers/tree/main/dockerfiles/learn2code_lecture) uses the [base_marp container](https://github.com/BenniWi/learn2code_containers/tree/main/dockerfiles/learn2code_base_marp) and adds everything needed to build all the lecture code and also the lecture slides.
 
