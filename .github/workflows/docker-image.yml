@@ -22,7 +22,7 @@ jobs:
       run: docker build . --file Dockerfile --tag benniwi/learn2code:22.04_base_marp
     - name: Build the lecture Docker 
       working-directory: ./dockerfiles/learn2code_lecture
-      run: docker build . --file Dockerfile --tag benniwi/learn2code:22:04_lecture
+      run: docker build . --file Dockerfile --tag benniwi/learn2code:22.04_lecture
     - name: docker login
       env: 
         DOCKER_USER: ${{secrets.DOCKER_USERNAME}}
@@ -31,11 +31,11 @@ jobs:
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
       if: ${{ github.ref == 'refs/heads/main' }}
     - name: docker push base
-      run: docker push benniwi/learn2code:base
+      run: docker push benniwi/learn2code:22.04_base
       if: ${{ github.ref == 'refs/heads/main' }}
     - name: docker push base_marp
-      run: docker push benniwi/learn2code:base_marp
+      run: docker push benniwi/learn2code:22.04_base_marp
       if: ${{ github.ref == 'refs/heads/main' }}
     - name: docker push lecture
-      run: docker push benniwi/learn2code:lecture
+      run: docker push benniwi/learn2code:22.04_lecture
       if: ${{ github.ref == 'refs/heads/main' }}
