@@ -18,7 +18,7 @@ RUN groupadd --gid $USER_GID $USERNAME \
     && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
     && chmod 0440 /etc/sudoers.d/$USERNAME
 
-# install everythin we need
+# install everything we need
 RUN \
     apt-get -y update \
     && apt-get install -y git build-essential lldb gdb ninja-build libgtest-dev wget curl software-properties-common \
