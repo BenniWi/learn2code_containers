@@ -16,13 +16,13 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build the base Docker 
       working-directory: ./dockerfiles/learn2code_base
-      run: docker build . --file Dockerfile --tag benniwi/learn2code:base
+      run: docker build . --file Dockerfile --tag benniwi/learn2code:22.04_base
     - name: Build the base marp Docker 
       working-directory: ./dockerfiles/learn2code_base_marp
-      run: docker build . --file Dockerfile --tag benniwi/learn2code:base_marp
+      run: docker build . --file Dockerfile --tag benniwi/learn2code:22.04_base_marp
     - name: Build the lecture Docker 
       working-directory: ./dockerfiles/learn2code_lecture
-      run: docker build . --file Dockerfile --tag benniwi/learn2code:lecture
+      run: docker build . --file Dockerfile --tag benniwi/learn2code:22:04_lecture
     - name: docker login
       env: 
         DOCKER_USER: ${{secrets.DOCKER_USERNAME}}
