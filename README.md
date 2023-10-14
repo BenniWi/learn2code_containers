@@ -5,11 +5,11 @@ The containers are meant to be used e.g. as **VSCode Devcontainers** (using [Git
 
 The pre-built images can be downloaded from the [learn2code dockerhub repository](https://hub.docker.com/repository/docker/benniwi/learn2code/general)
 
-Currently the available containers are
+Currently, the available containers are
 
 ## Base Container
 
-The [base container](https://github.com/BenniWi/learn2code_containers/tree/main/dockerfiles/learn2code_base) defines a container which can be used for for all programming tasks during the lecture.
+The [base container](https://github.com/BenniWi/learn2code_containers/tree/main/dockerfiles/learn2code_base) defines a container that can be used for all programming tasks during the lecture.
 
 ## Base Marp Container
 
