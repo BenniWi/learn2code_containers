@@ -1,4 +1,4 @@
-FROM benniwi/learn2code:base
+FROM benniwi/learn2code:22.04_base
 
 RUN \
     sudo apt-get update \

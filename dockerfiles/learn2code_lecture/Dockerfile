@@ -1,4 +1,4 @@
-FROM benniwi/learn2code:base_marp
+FROM benniwi/learn2code:22.04_base_marp
 
 RUN \
     sudo apt-get update \
