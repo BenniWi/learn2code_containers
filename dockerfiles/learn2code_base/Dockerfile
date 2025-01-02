@@ -1,9 +1,9 @@
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 
 ARG USERNAME=dev
-ARG USER_UID=1000
+ARG USER_UID=1111
 ARG USER_GID=$USER_UID
-ARG CMAKE_VERSION=3.27.7
+ARG CMAKE_VERSION=3.31.3
 
 # fix the timezone asking when creating the container
 ENV TZ=Europe/Berlin
@@ -28,7 +28,7 @@ RUN \
 RUN \
     wget https://apt.llvm.org/llvm.sh \
     && chmod +x llvm.sh \
-    && ./llvm.sh 16 all \
+    && ./llvm.sh 18 all \
     && rm llvm.sh
 
 # bring in latest cmake - download it as binary
