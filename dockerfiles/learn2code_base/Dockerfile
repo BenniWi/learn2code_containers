@@ -21,7 +21,7 @@ RUN groupadd --gid $USER_GID $USERNAME \
 # install everything we need
 RUN \
     apt-get -y update \
-    && apt-get install -y git build-essential gdb ninja-build libgtest-dev wget curl doxygen graphviz software-properties-common libssl-dev\
+    && apt-get install -y git build-essential gdb ninja-build libgtest-dev wget curl doxygen graphviz software-properties-common libssl-dev libxss1\
     && rm -rf /var/lib/apt/lists/* 
 
 # bring in latest clang toolchain
